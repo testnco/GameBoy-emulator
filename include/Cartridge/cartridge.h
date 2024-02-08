@@ -21,11 +21,11 @@
 class Cartridge
 {
     public:
-        Cartridge(std::filesystem::path rom_path);
-        bool GetInfo();
+        Cartridge(const std::filesystem::path& rom_path);
+        unsigned char ReadInfo() const;
 
     private:
-        
+        std::filesystem::path m_rom_path;
 };
 
 #endif // __CARTRIDGE_H__
