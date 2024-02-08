@@ -1,17 +1,17 @@
-project(test_folder)
+project(cartridge_folder)
 
-# Add sources to the project in src/test
-set(TEST_SOURCES
-    myheader.cpp
+# Add sources to the project in src/cartridge
+set(CARTRIDGE_SOURCES
+    cartridge.cpp
 )
 
 # Define a library to be used in tests
 add_library(${PROJECT_NAME} STATIC
-    ${TEST_SOURCES}
+    ${CARTRIDGE_SOURCES}
 )
 
 # Optionally, configure include paths for testing
 target_include_directories(${PROJECT_NAME}
     PRIVATE
-        ${CMAKE_SOURCE_DIR}/include
+        ${CMAKE_SOURCE_DIR}/include/Cartridge
 )
